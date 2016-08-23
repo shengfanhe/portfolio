@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<head>
+  <title>Display Ranged Values</title>
+  <link href="css/salesforce-lightning-design-system.min.css" rel="stylesheet">
+  <style>
+  	body {
+  		padding: 20px;
+  	}
+    .input input {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+    .pills {
+      margin: 10px 10px 0 5px;
+      background-color: #f4f6f9;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- REQUIRED SLDS WRAPPER -->
+  <div class="slds">
+
+    <fieldset class="slds-form-element">
+      <div class="slds-form-element__control">
+        <label class="slds-radio">
+          <input type="radio" name="options" />
+          <span class="slds-radio--faux"></span>
+          <span class="slds-form-element__label">Display Range of Values</span>
+        </label>
+      </div>
+    </fieldset>
+    <br>
+
+    <!-- PRIMARY CONTENT WRAPPER -->
+    <div class="myapp">
+
+      <!-- SECTION - BADGE COMPONENTS -->
+      <section class="input">
+        <input class="slds-input" id="first"></input> -
+        <input class="slds-input" id="second"></input>
+        <br>
+        <input class="slds-input" id="third"></input> -
+        <input class="slds-input" id="forth"></input>
+      </section>
+      <span class="pill-lable">Ranges:</span>
+      <span class="pills" id="pill-1"></span>
+      <span class="pills" id="pill-2"></span>
+      <span class="pills" id="pill-3"></span>
+      <span class="pills" id="pill-4"></span>
+      <!-- / SECTION - BADGE COMPONENTS -->
+
+    </div>
+    <!-- / PRIMARY CONTENT WRAPPER -->
+
+  </div>
+  <!-- / REQUIRED SLDS WRAPPER -->
+
+  <script>
+    document.getElementById("first").onkeyup = function() {firstInput()};
+    function firstInput() {
+        var x = document.getElementById("first").value;
+        document.getElementById("pill-1").innerHTML='<'+x;
+        document.getElementById("pill-2").innerHTML=(x)+'+';
+    }
+
+    document.getElementById("second").onkeyup = function() {secondInput()};
+    function secondInput() {
+        var x = document.getElementById("first").value;
+        var y = document.getElementById("second").value;
+        document.getElementById("pill-2").innerHTML=x+'-'+y;
+        document.getElementById("third").value=(++y)
+        document.getElementById("pill-3").innerHTML=y+'+';
+    }
+
+    document.getElementById("forth").onkeyup = function() {forthInput()};
+    function forthInput() {
+        var x = document.getElementById("third").value;
+        var y = document.getElementById("forth").value;
+        document.getElementById("pill-3").innerHTML=x+'-'+y;
+        document.getElementById("pill-4").innerHTML=(++y)+'+'
+    }
+  </script>
+
+</body>
+
+</html>
