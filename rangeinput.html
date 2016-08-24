@@ -15,6 +15,13 @@
       margin: 10px 10px 0 5px;
       background-color: #f4f6f9;
     }
+    .slds-card {
+      padding: 14px;
+      width: 250px;
+    }
+    #add {
+      margin: 20px 0 0 40px;
+    }
   </style>
 </head>
 
@@ -37,18 +44,23 @@
     <div class="myapp">
 
       <!-- SECTION - BADGE COMPONENTS -->
-      <section class="input">
-        <input class="slds-input" id="first"></input> -
-        <input class="slds-input" id="second"></input>
-        <br>
-        <input class="slds-input" id="third"></input> -
-        <input class="slds-input" id="forth"></input>
-      </section>
+      <div class="slds-card">
+        <section class="input">
+          <input class="slds-input" id="first"></input> -
+          <input class="slds-input" id="second"></input>
+          <br>
+          <input class="slds-input" id="third"></input> -
+          <input class="slds-input" id="forth"></input>
+          <a id="add" href="">+add</a>
+        </section>
+      </div>
+      <br>
       <span class="pill-lable">Ranges:</span>
       <span class="pills" id="pill-1"></span>
       <span class="pills" id="pill-2"></span>
       <span class="pills" id="pill-3"></span>
       <span class="pills" id="pill-4"></span>
+    </div>
       <!-- / SECTION - BADGE COMPONENTS -->
 
     </div>
