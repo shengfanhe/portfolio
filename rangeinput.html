@@ -9,35 +9,45 @@
   	}
     .input input {
       width: 60px;
-      margin-bottom: 10px;
+      margin: 3px 0;
     }
     .pills {
       margin: 10px 10px 0 5px;
       background-color: #f4f6f9;
     }
     .slds-card {
-      padding: 14px;
-      width: 250px;
+      padding: 12px;
+      width: 240px;
     }
     #add {
       margin: 20px 0 0 40px;
+    }
+    .wrapper {
+    position: relative;
+    width: 1400px;
+    }
+    .wrapper img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+    .myapp {
+      position: absolute;
+      z-index: 99;
+      right: 310px;
+      top: 645px;
     }
   </style>
 </head>
 
 <body>
   <!-- REQUIRED SLDS WRAPPER -->
+  <div class="wrapper">
+    <img src="Choose Attributes age.png"/>
+
   <div class="slds">
 
-    <fieldset class="slds-form-element">
-      <div class="slds-form-element__control">
-        <label class="slds-radio">
-          <input type="radio" name="options" />
-          <span class="slds-radio--faux"></span>
-          <span class="slds-form-element__label">Display Range of Values</span>
-        </label>
-      </div>
-    </fieldset>
     <br>
 
     <!-- PRIMARY CONTENT WRAPPER -->
@@ -51,7 +61,7 @@
           <br>
           <input class="slds-input" id="third"></input> -
           <input class="slds-input" id="forth"></input>
-          <a id="add" href="">Refresh</a>
+          <a id="add" href="">+add</a>
         </section>
       </div>
       <br>
@@ -62,12 +72,8 @@
       <span class="pills" id="pill-4"></span>
     </div>
       <!-- / SECTION - BADGE COMPONENTS -->
-
-    </div>
-    <!-- / PRIMARY CONTENT WRAPPER -->
-
   </div>
-  <!-- / REQUIRED SLDS WRAPPER -->
+</div>
 
   <script>
     document.getElementById("first").onkeyup = function() {firstInput()};
