@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+}
+.slds-input {
+  width: 120px;
+  margin: 5px;
+}
+
+.slds-card {
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.myapp {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 610px;
+}
+
+.slds-pill {
+  margin: 0 5px;
+}
+
+.slds-button_icon {
+  width: .875rem;
+  height: .875rem;
+  margin-left: 10px;
+}
+
+.short-line {
+  display: inline-block;
+  font-weight: bold;
+  color: #e0e5ee;
+}
+
+/*.line-margin {
+  margin: 0 3.3px;
+}*/
+
+.line-active {
+  color: #FF550A;
+}
+
+.slds-button {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.pill-hidden {
+  display: none;
+}
